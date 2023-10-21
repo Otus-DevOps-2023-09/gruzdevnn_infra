@@ -4,29 +4,29 @@ gruzdevnn Infra repository
     bastion_IP = 158.160.127.47
     someinternalhost_IP = 10.128.0.28
 
-#cloud-bastion
-#Подключение в одну строку через бастион:
+# cloud-bastion
+# РџРѕРґРєР»СЋС‡РµРЅРёРµ РІ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ С‡РµСЂРµР· Р±Р°СЃС‚РёРѕРЅ:
 #
-#ssh -J engineer@158.160.127.47 engineer@10.128.0.28 -i ~/.ssh/engineer2
+# ssh -J engineer@158.160.127.47 engineer@10.128.0.28 -i ~/.ssh/engineer2
 #
-#(engineer2 - приветный ключ от someinternalhost)
+# (engineer2 - РїСЂРёРІРµС‚РЅС‹Р№ РєР»СЋС‡ РѕС‚ someinternalhost)
 #
-#Подключение через алиасы:
+# РџРѕРґРєР»СЋС‡РµРЅРёРµ С‡РµСЂРµР· Р°Р»РёР°СЃС‹:
 #
-#Открываем vim ~/.ssh/config на локальной машине (Ubuntu 23)
+# РћС‚РєСЂС‹РІР°РµРј vim ~/.ssh/config РЅР° Р»РѕРєР°Р»СЊРЅРѕР№ РјР°С€РёРЅРµ (Ubuntu23)
 #
-#Host bastion
+# Host bastion
 #    HostName 158.160.127.47
 #    User engineer
 #
-#Host someinternalhost
+# Host someinternalhost
 #    HostName 10.128.0.28
 #    User engineer
 #    ProxyJump bastion
 #    IdentityFIle ~/.ssh/engineer2
 #
-#Потом заходим ssh someinternalhost
+# РџРѕС‚РѕРј Р·Р°С…РѕРґРёРј ssh someinternalhost
 #
-#После подключения vpn смог зайти через Putty на Windows, используя переделанный в Puttygen сертификат
-#на внутренний адрес 10.128.0.28
-#Если нужно как-то иначе пробовать зайти, могу попытаться настроить
+# РџРѕСЃР»Рµ РїРѕРґРєР»СЋС‡РµРЅРёСЏ vpn СЃРјРѕРі Р·Р°Р№С‚Рё С‡РµСЂРµР· Putty РЅР° Windows, РёСЃРїРѕР»СЊР·СѓСЏ РїРµСЂРµРґРµР»Р°РЅРЅС‹Р№ РІ Puttygen СЃРµСЂС‚РёС„РёРєР°С‚
+# РЅР° РІРЅСѓС‚СЂРµРЅРЅРёР№ Р°РґСЂРµСЃ 10.128.0.28
+# Р•СЃР»Рё РЅСѓР¶РЅРѕ РєР°Рє-С‚Рѕ РёРЅР°С‡Рµ РїСЂРѕР±РѕРІР°С‚СЊ Р·Р°Р№С‚Рё, РјРѕРіСѓ РїРѕРїС‹С‚Р°С‚СЊСЃСЏ РЅР°СЃС‚СЂРѕРёС‚СЊ
