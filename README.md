@@ -5,16 +5,7 @@ gruzdevnn Infra repository
     someinternalhost_IP = 10.128.0.28
 
 # cloud-bastion
-# ssh -J engineer@158.160.127.47 engineer@10.128.0.28 -i ~/.ssh/engineer2
-# Host bastion
-# HostName 158.160.127.47
-# User engineer
-# Host someinternalhost
-# HostName 10.128.0.28
-# User engineer
-# ProxyJump bastion
-#    IdentityFIle ~/.ssh/engineer2
-# 10.128.0.28
+
 # cloud-testapp
 
     testapp_IP = 62.84.114.200
