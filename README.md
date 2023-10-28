@@ -5,28 +5,19 @@ gruzdevnn Infra repository
     someinternalhost_IP = 10.128.0.28
 
 # cloud-bastion
-# Подключение в одну строку через бастион:
-#
-# ssh -J engineer@158.160.127.47 engineer@10.128.0.28 -i ~/.ssh/engineer2
-#
-# (engineer2 - приветный ключ от someinternalhost)
-#
-# Подключение через алиасы:
-#
-# Открываем vim ~/.ssh/config на локальной машине (Ubuntu23)
-#
-# Host bastion
-#    HostName 158.160.127.47
-#    User engineer
-#
-# Host someinternalhost
-#    HostName 10.128.0.28
-#    User engineer
-#    ProxyJump bastion
-#    IdentityFIle ~/.ssh/engineer2
-#
-# Потом заходим ssh someinternalhost
-#
-# После подключения vpn смог зайти через Putty на Windows, используя переделанный в Puttygen сертификат
-# на внутренний адрес 10.128.0.28
-# Если нужно как-то иначе пробовать зайти, могу попытаться настроить
+
+# cloud-testapp
+
+    testapp_IP = 62.84.114.200
+    testapp_port = 9292
+
+# command for run instance YC
+
+    yc compute instance create \
+      --name reddit-app3 \
+      --hostname reddit-app3 \
+      --memory=4 \
+      --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+      --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
+      --metadata-from-file user-data=Startup.yaml \
+      --metadata serial-port-enable=1
