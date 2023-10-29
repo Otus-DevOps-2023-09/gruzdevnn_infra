@@ -8,7 +8,7 @@
             "source_image_family": "{{user `msource_image_family`}}",
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
-            "subnet_id": "{{user `msubnet_id`}}",
+            "subnet_id": "e9b6novi7vdmhr9geb99",
             "use_ipv4_nat":  true,
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1"

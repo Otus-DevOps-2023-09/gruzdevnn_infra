@@ -1,6 +1,5 @@
 {
 "mservice_account_key_file": "/home/engineer/mykeys/key.json",
 "mfolder_id": "b2gti80ljukuik2kfpk2",
-"msource_image_family": "ubuntu-1204-lts",
-"msubnet_id": "e1b5npvo8vdnlr1gfo00"
+"msource_image_family": "ubuntu-1204-lts"
 }
