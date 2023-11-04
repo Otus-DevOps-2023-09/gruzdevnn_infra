@@ -1,11 +1,11 @@
-terraform {
-  required_providers {
-    yandex = {
-      source = "yandex-cloud/yandex"
-    }
-  }
-  required_version = ">= 0.13"
-  }
+#terraform {
+  #required_providers {
+    #yandex = {
+      #source = "yandex-cloud/yandex"
+    #}
+  #}
+  #required_version = ">= 0.13"
+  #}
 
   provider "yandex" {
     token     = "y0_AgAAAABxjvfaAATuwQAAAADwGs-6LBb1S43rSiuiQZKQroJT3wP1CaU"
