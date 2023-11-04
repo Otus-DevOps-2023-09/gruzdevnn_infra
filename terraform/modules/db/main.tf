@@ -8,9 +8,9 @@
   #}
 
   provider "yandex" {
-    token     = "
-    cloud_id  = "b"
-    folder_id = ""
+    token     = "34f34f3vrdf"
+    cloud_id  = "bgstegsergter"
+    folder_id = "dgbdfdrrtt"
     zone      = "ru-central1-a"
   }
 
