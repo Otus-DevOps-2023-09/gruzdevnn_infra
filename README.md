@@ -5,7 +5,9 @@ gruzdevnn Infra repository
     someinternalhost_IP = 10.128.0.28
 
 # cloud-bastion
+
 done
+
 # cloud-testapp
 
     testapp_IP = 62.84.114.200
