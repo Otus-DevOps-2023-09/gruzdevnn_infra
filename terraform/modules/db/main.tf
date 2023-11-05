@@ -8,10 +8,10 @@
   #}
 
   provider "yandex" {
-    token     = "y0_AgAAAABxjvfaAATuwQAAAADwGs-6LBb1S43rSiuiQZKQroJT3wP1CaU"
-    cloud_id  = "b1gep01krptc15obs9q9"
-    folder_id = "b1gtu89ljuktik0kfuk2"
-    zone      = "ru-central1-a"
+    service_account_key_file = var.service_account_key_file
+    cloud_id  = var.cloud_id
+    folder_id = var.folder_id
+    zone      = var.zone
   }
 
 resource "yandex_compute_instance" "db" {
