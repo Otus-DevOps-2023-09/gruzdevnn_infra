@@ -1,0 +1,8 @@
+cloud_id = "ge5w5yw454w5g45g4g55454"
+folder_id = "45g45g45w445g545g45g54"
+zone = "ru-central1-a"
+image_id = "45gw4g5w4ww45w454545g"
+public_key_path = "./appuser.pub"
+subnet_id = "h445yw45y45y45yq35y4"
+service_account_key_file = "./appuser.json"
+privat_key_path = "./appuser"
