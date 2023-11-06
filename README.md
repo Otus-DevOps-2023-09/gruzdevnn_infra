@@ -6,8 +6,6 @@ gruzdevnn Infra repository
 
 # cloud-bastion
 
-done
-
 # cloud-testapp
 
     testapp_IP = 62.84.114.200
