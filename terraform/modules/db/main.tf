@@ -1,18 +1,11 @@
 #terraform {
-  #required_providers {
-    #yandex = {
-      #source = "yandex-cloud/yandex"
-    #}
+ # required_providers {
+   # yandex = {
+    #  source = "yandex-cloud/yandex"
+   # }
   #}
-  #required_version = ">= 0.13"
-  #}
-
-  provider "yandex" {
-    service_account_key_file = var.service_account_key_file
-    cloud_id  = var.cloud_id
-    folder_id = var.folder_id
-    zone      = var.zone
-  }
+ # required_version = ">= 0.13"
+#}
 
 resource "yandex_compute_instance" "db" {
   name = "reddit-db"
@@ -30,10 +23,13 @@ resource "yandex_compute_instance" "db" {
       image_id = var.db_disk_image
     }
   }
+
   network_interface {
-    subnet_id = var.subnet_id
-    nat = true
+    # Указан id подсети default-ru-central1-a
+    subnet_id = "e9b6novi7vdmhr9geb99"
+    nat       = true
   }
+
   metadata = {
   ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
