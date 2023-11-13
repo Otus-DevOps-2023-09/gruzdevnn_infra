@@ -21,3 +21,5 @@ gruzdevnn Infra repository
       --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
       --metadata-from-file user-data=Startup.yaml \
       --metadata serial-port-enable=1
+
+# Ansible-1
