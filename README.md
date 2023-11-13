@@ -23,3 +23,14 @@ gruzdevnn Infra repository
       --metadata serial-port-enable=1
 
 # Ansible-1
+
+После выполнения команды:
+
+    ansible-playbook clone.yml
+
+Терминал показал: ok=2 changed=0, так как изменения уже были произведены предыдущей командой, Ansible просто проверил сооветсивие состояния системы плейбуку.
+После выполнения команды:
+
+    ansible app -m command -a 'rm -rf ~/reddit'
+
+Состояние системы изменилось и Ansible выполнил действия (клонирование), поэтому в терминале было: ok=2 changed=1
