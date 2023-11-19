@@ -34,3 +34,40 @@ gruzdevnn Infra repository
     ansible app -m command -a 'rm -rf ~/reddit'
 
 Состояние системы изменилось и Ansible выполнил действия (клонирование), поэтому в терминале было: ok=2 changed=1
+
+# Ansible-2
+
+Проблемы, которые возникли:
+
+1. Не скачивались файлы с git, добавил блок для установки git
+
+    - name: Install git
+      become : true
+      apt:
+        name: git
+        state: present
+        update_cache: yes
+
+2. Ошибка:
+
+    failed to handshake
+
+Обновил файл config.pkr.hcl
+
+3. Ошиибка:
+
+    FAILED! => {"msg": "failed to transfer file to...
+
+Добавил блок в provisioners:
+
+            "extra_arguments": [
+            "--scp-extra-args", "'-O'",
+        ]
+
+4. Ошибка с доступом к репозиторию mongodb. Обновил ключ:
+
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv D68FA50FEA312927
+
+Проверил, что новый ключ рабочий по ссылке:
+
+    http://keyserver.ubuntu.com/

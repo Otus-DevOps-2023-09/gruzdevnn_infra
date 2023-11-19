@@ -12,6 +12,7 @@ variables.json
 *.tfstate.backup
 *.tfvars
 .terraform/
+*.retry
 
 # Игнорируем директорию в любой директории проекта
 #access.log
