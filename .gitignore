@@ -13,6 +13,8 @@ variables.json
 *.tfvars
 .terraform/
 *.retry
+jdauphant.nginx
+vault.key
 
 # Игнорируем директорию в любой директории проекта
 #access.log
