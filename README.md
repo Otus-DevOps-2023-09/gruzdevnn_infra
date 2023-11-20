@@ -71,3 +71,10 @@ gruzdevnn Infra repository
 Проверил, что новый ключ рабочий по ссылке:
 
     http://keyserver.ubuntu.com/
+
+# Ansible-3
+
+Была проблема с прохождением тестов, она решилась добавлением блока в файл ansible.cfg
+
+    [galaxy]
+    server = https://old-galaxy.ansible.com/
